@@ -1,0 +1,2 @@
+2)
+If the FanControl Server is multi-threaded and multiple clients try to write states to the controller, there might occur clashes among the states. Therefore to avoid this we have to synchronize the state write functions, preventing multiple writes at a instance.

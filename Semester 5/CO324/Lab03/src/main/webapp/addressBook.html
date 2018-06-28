@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Book</title>
+</head>
+<body>
+    <h2 style="color:blue;">Address Book Directory</h2>
+    <br>
+    <div style="background-color:rgb(224, 235, 235); padding:20px;">
+        <form method="get" action="searchCon">
+            <h3>Search Contacts</h3>
+            Search by Name:
+            <input type="text" name="name"/> <br> <br>
+            <input type="submit" value="Search"/>
+        </form>
+        <form method="post" action="addCon">
+            <h3>Add Contacts</h3>
+            Name:
+            <input type="text" name="name"/> <br> <br>
+            Phone:
+            <input type="text" name="phone"/> <br> <br>
+            Mail:
+            <input type="email" name="mail"/> <br> <br>
+            <input type="submit" value="Add"/>
+        </form>
+    </div>
+</body>
+</html>
+

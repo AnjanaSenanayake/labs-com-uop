@@ -1,0 +1,4 @@
+3)There can be moment where multiple threads try to access
+and write to the StringBuffer. Thus StringBuffer might 
+choose one of the threads and others might not be allowed
+to access or write.

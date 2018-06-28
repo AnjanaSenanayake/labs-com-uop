@@ -1,0 +1,20 @@
+2) No. There can not be any differences since these
+data are not requested individually by client, but sent from the
+server. so whoever the client is he/she should recieve 
+the same data.
+
+3) Stock prices come along with a tag called "data". otherwise 
+its the same.
+
+4) The wait() method is called Until the stock price is updated, 
+otherwise the same stock value will be printed over again and 
+again.
+
+When wait() method is called the current thread will be put to the
+waiting stack. Thereafter we can wake up the previous thread by
+calling the notifyAll() method, once the price is updated.
+
+The most important thing to keep in mind is that we need to call
+wait() and notifyAll() methods always inside a synchronized block
+to avoid clashes between threads which might lead to racing 
+conditions.
