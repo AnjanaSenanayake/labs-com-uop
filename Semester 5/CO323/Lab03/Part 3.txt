@@ -1,0 +1,12 @@
+To reduce the congestion, the bucket is programmed to 
+reduce its capacity by 20%, if it started to flow high 
+density packets(packets within the size of 80% of bucket
+capacity) simultaneously(for 3 consecutive packets), assuming 
+the situation as a beginning of a bursty packet flow. 
+
+Again bucket capacity will set to default once the bursty 
+period is over. Thus, this method will able to forsee and 
+reduce overcoming congestions.
+
+This method is coded in the same program code.
+
