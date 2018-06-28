@@ -1,0 +1,71 @@
+CREATE DATABASE E14317Lab03;
+Query OK, 1 row affected (0.00 sec)
+
+USE E14317Lab03;
+Database changed
+
+CREATE TABLE Order_Details(
+Order_No INT AUTO_INCREMENT PRIMARY KEY,
+Size ENUM('Small','Medium','Large'),
+Colour ENUM('Red','Blue','Green','Purple'),
+Cap ENUM('True','False'),
+WristBand ENUM('True','False'),
+FirstName VARCHAR(20),
+LastName VARCHAR(20),
+Address1 VARCHAR(20),
+Address2 VARCHAR(20),
+Address3 VARCHAR(20),
+Comments TEXT);
+Query OK, 0 rows affected (0.05 sec)
+
+DESCRIBE Order_Details;
++-----------+-------------------------------------+------+-----+---------+----------------+
+| Field     | Type                                | Null | Key | Default | Extra          |
++-----------+-------------------------------------+------+-----+---------+----------------+
+| Order_No  | int(11)                             | NO   | PRI | NULL    | auto_increment |
+| Size      | enum('Small','Medium','Large')      | YES  |     | NULL    |                |
+| Colour    | enum('Red','Blue','Green','Purple') | YES  |     | NULL    |                |
+| Cap       | enum('True','False')                | YES  |     | NULL    |                |
+| WristBand | enum('True','False')                | YES  |     | NULL    |                |
+| FirstName | varchar(20)                         | YES  |     | NULL    |                |
+| LastName  | varchar(20)                         | YES  |     | NULL    |                |
+| Address1  | varchar(20)                         | YES  |     | NULL    |                |
+| Address2  | varchar(20)                         | YES  |     | NULL    |                |
+| Address3  | varchar(20)                         | YES  |     | NULL    |                |
+| Comments  | text                                | YES  |     | NULL    |                |
++-----------+-------------------------------------+------+-----+---------+----------------+
+11 rows in set (0.00 sec)
+
+INSERT INTO Order_Details 
+(Size,Colour,Cap,WristBand,FirstName,LastName,Address1,Address2,Address3,Comments) 
+VALUES
+('Small','Blue','True','False','Anjana','Senanayake','No 15B','Peradeniya Road','Gatambe','Deliver Soon');
+Query OK, 1 row affected (0.00 sec)
+
+SELECT* FROM Order_Details;
++----------+-------+--------+------+-----------+-----------+------------+----------+-----------------+----------+--------------+
+| Order_No | Size  | Colour | Cap  | WristBand | FirstName | LastName   | Address1 | Address2        | Address3 | Comments     |
++----------+-------+--------+------+-----------+-----------+------------+----------+-----------------+----------+--------------+
+|        1 | Small | Blue   | True | False     | Anjana    | Senanayake | No 15B   | Peradeniya Road | Gatambe  | Deliver Soon |
++----------+-------+--------+------+-----------+-----------+------------+----------+-----------------+----------+--------------+
+1 row in set (0.00 sec)
+
+UPDATE Order_Details SET Size='Medium', WristBand='True'
+WHERE Order_No=1;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 2  Warnings: 0
+
+SELECT* FROM Order_Details;
++----------+--------+--------+------+-----------+-----------+------------+----------+-----------------+----------+--------------+
+| Order_No | Size   | Colour | Cap  | WristBand | FirstName | LastName   | Address1 | Address2        | Address3 | Comments     |
++----------+--------+--------+------+-----------+-----------+------------+----------+-----------------+----------+--------------+
+|        1 | Medium | Blue   | True | True      | Anjana    | Senanayake | No 15B   | Peradeniya Road | Gatambe  | Deliver Soon |
++----------+--------+--------+------+-----------+-----------+------------+----------+-----------------+----------+--------------+
+1 row in set (0.00 sec)
+
+DELETE FROM Order_Details
+WHERE Order_No=1;
+Query OK, 1 row affected (0.00 sec)
+
+SELECT* FROM Order_Details;
+Empty set (0.00 sec)

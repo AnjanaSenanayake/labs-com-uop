@@ -1,0 +1,37 @@
+
+
+mysql> CREATE DATABASE EXXXXXLab02;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> USE EXXXXXLab02;
+Database changed
+mysql> CREATE TABLE orders ( orderNo INT AUTO_INCREMENT PRIMARY KEY , time TIMESTAMP, size ENUM('small','medium','large'), color ENUM
+    -> ('Red','Purple','Blue','Green'), cap ENUM('true','false'), wrist ENUM('true','false'), firstName VARCHAR(20), lastName VARCHAR(20), address1 VARCHAR
+    -> (50), address2 VARCHAR(50), address3 VARCHAR(50), comments TEXT);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> DESCRIBE orders;
++-----------+-------------------------------------+------+-----+-------------------+-----------------------------+
+| Field     | Type                                | Null | Key | Default           | Extra                       |
++-----------+-------------------------------------+------+-----+-------------------+-----------------------------+
+| orderNo   | int(11)                             | NO   | PRI | NULL              | auto_increment              |
+| time      | timestamp                           | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |
+| size      | enum('small','medium','large')      | YES  |     | NULL              |                             |
+| color     | enum('Red','Purple','Blue','Green') | YES  |     | NULL              |                             |
+| cap       | enum('true','false')                | YES  |     | NULL              |                             |
+| wrist     | enum('true','false')                | YES  |     | NULL              |                             |
+| firstName | varchar(20)                         | YES  |     | NULL              |                             |
+| lastName  | varchar(20)                         | YES  |     | NULL              |                             |
+| address1  | varchar(50)                         | YES  |     | NULL              |                             |
+| address2  | varchar(50)                         | YES  |     | NULL              |                             |
+| address3  | varchar(50)                         | YES  |     | NULL              |                             |
+| comments  | text                                | YES  |     | NULL              |                             |
++-----------+-------------------------------------+------+-----+-------------------+-----------------------------+
+12 rows in set (0.00 sec)
+
+mysql> INSERT INTO orders (size,color,cap,wrist,firstName,lastName,address1,address2,address3,comments) VALUES 
+    -> ('small','Blue','true','true','KLM','Perera','NO 3/3','Mathara Rd','Galle', 'this is the first order.');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM orders;
+Query OK, 1 row affected (0.00 sec)

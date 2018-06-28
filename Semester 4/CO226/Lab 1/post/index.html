@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head> <title> Buy T-shirts Online </title> </head>
+
+<body>
+
+<h1> Buy T-shirts Online </h2>
+<h2> Fill out the form below and click "Order Now" to order </h2>
+
+<form name="tshirt_form" action="post.php" method="post">
+<table border="0">
+
+<tr>
+<td><center><b>Choose your size:</b></center> </td>
+<td> <input type="radio" name="size" value="Small">small
+<input type="radio" name="size" value="Medium">medium
+<input type="radio" name="size" value="Large">large</td>
+</tr>
+
+<tr>
+<td><center><b>Choose your colour:</b> </center></td>
+<td><select name="color">
+<option value="Red">Red</option>
+<option value="Purple">Purple</option>
+<option value="Blue">Blue</option>
+<option value="Green">Green</option>
+</select></td>
+</tr>
+
+<tr>
+<td><b><center> Extra Items: </center></b></td>
+<td><input type="checkbox" name="extra1" value="Cap">Cap<br>
+<input type="checkbox" name="extra2" value="Wristband">Wrist band</td>
+</tr>
+
+<tr> <td><center><b> Deliver to: </b> </center></td> 
+<td>
+<table border="0"> <tr> <td><b>First Name:</b></td> <td><input type="text" name="firstname"></td> </tr>
+<tr> <td><b>Last Name:</b></td>  <td><input type="text" name="lastname"></td> </tr>
+<tr> <td><b>&nbsp Address 1:</b></td>  <td><input type="text" name="address1"></td></tr>
+<tr> <td><b>&nbsp Address 2:</b></td>  <td><input type="text" name="address2"></td></tr>
+<tr> <td><b>&nbsp Address 3:</b></td>  <td><input type="text" name="address3"></td></tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td><center><b>Your Comments:</b></center> </td>
+<td><textarea name="comments" rows="10" cols="30"></textarea></td>
+</tr>
+
+<tr><td></td>
+<td><input type="submit" value="Order Now"</td>
+</tr>
+
+</table>
+</form>
+
+
+</body>
+
+</html>

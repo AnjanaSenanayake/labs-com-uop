@@ -1,0 +1,19 @@
+Assumptions
+
+-One lecturer can be head of only one department at a time
+-Department has only one head
+-A department definitely has a head
+-A department has at least one lecturer and a lectuter definitely belong to one department only
+-A course offering can be taught by several lecturers
+-A course offering definitely has a lecturer
+-A student can have only one advisor and definitely has an advisor
+-A lecturer can have no students to advise
+-Lecturers ID is unique
+-A student definitely has one department
+-A department has at least one student
+-There can be courses where no students are enrolled and there can be students who are not enrolled to any course
+-Course offerings are weak entities that depend on the entity course
+-Department handles at least one course
+-A single course cannot be handled by multiple departments and a course offered should definitely has a department
+-There can be several offerings of the same course but only one offering per year. So year can be used as a weak key
+

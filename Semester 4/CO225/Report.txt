@@ -1,0 +1,69 @@
+Observations And Conclusions
+CO225-Lab 05 
+E/14/317
+---------------------------------------------------------------------------------------------------------------
+
+######################################Part A-Small to Large m,p,n Values of Matrices with Different Threads###################################
+
+TestCases: TestA_1.txt,TestB_1.txt,TestA_2.txt,TestB_2.txt,TestA_3.txt,TestB_3.txt,TestA_4.txt,TestB_4.txt,TestA_5.txt,TestB_5.txt
+
+
+Case 01 :TestA_1.txt(9X11) & TestB_1.txt(11x2)
+
+Single threaded execution time: 2ms
+Double threaded execution time: 2ms
+4 threaded execution time: 2ms
+8 threaded execution time: 3ms
+16 threaded execution time: 4ms
+64 threaded execution time: 9ms
+
+----------------------------------------------
+
+Case 02 :TestA_2.txt(10x5) & TestB_2.txt(5x20)
+
+Single threaded execution time: 3ms
+Double threaded execution time: 2ms
+4 threaded execution time: 2ms
+8 threaded execution time: 2ms
+16 threaded execution time: 6ms
+64 threaded execution time: 22ms
+
+Case 03 :TestA_3.txt(20x30) & TestB_3.txt(30x60)
+
+Single threaded execution time: 5ms
+Double threaded execution time: 4ms
+4 threaded execution time: 3ms
+8 threaded execution time: 4ms
+16 threaded execution time: 5ms
+64 threaded execution time: 12ms
+
+Case 04 :TestA_4.txt(400x400) & TestB_4.txt(400x400)
+
+Single threaded execution time: 89ms
+Double threaded execution time: 61ms
+4 threaded execution time: 63ms
+8 threaded execution time: 68ms
+16 threaded execution time: 71ms
+64 threaded execution time: 79ms
+
+Case 04 :TestA_4.txt(1000x1000) & TestB_4.txt(1000x1000)
+
+Single threaded execution time: 1099ms
+Double threaded execution time: 687ms
+4 threaded execution time: 640ms
+8 threaded execution time: 616ms
+16 threaded execution time: 616ms
+64 threaded execution time: 580ms
+=============================================================Conclusion========================================================================
+
+Multi-threading does not guarantee increase in the performance.
+Firstly, the actual resources that really matter in multi-processing is the number of parallel processing unit and whether they are busy or not - and not the number of threads. If the parallel processing units are all busy, or if
+	
+									the number of thread > number of parallel processing unit
+
+then making more thread will decrease the performance, not increasing it.
+Secondly is the context switch factor. The more threads you have, likely the more often you do your context switches. Therefore, if your Thread computation time is relatively low as compared to the context switch time, then you have a worse performance with multi-threading.
+And thirdly, it is also affected by the shared-resources (or synchronization) factor: whether the shared resources are often accessed by the multiple threads - where they will need to wait for one another thus resulting in slower execution.
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	div {
+    	width: 650px;
+   	 	padding: 22px;
+    	border: 1px solid black;
+    	margin: 5px;
+	}
+	</style>
+	<h1><title>Buy T-shirts Online</title></h1>
+</head>
+<body>
+<center>
+<div align="left">
+	<h1>Buy T-shirts Online</h1>
+	<h2>Fill out the form below and click "Order Now" to order</h2>
+<table>
+	<form name="tshirtsform" action="myget.php" method="get">
+		
+		<tr>
+			<td><b>Search by order name:</b></td>
+			<td>
+				<input type="search" name="search">	
+				<input type="submit" value="Search">
+			</td>
+		</tr>	
+		<tr>
+			<td><center><b>Choose your size:</b></center></td>
+			<td> 
+				<input type="radio" name="size" value="Small">Small
+				<input type="radio" name="size" value="Medium">Medium
+				<input type="radio" name="size" value="Large">Large
+			</td>
+		</tr>
+		<tr>
+			<td><center><b>Choose your colour:</b></center></td>
+			<td>
+				<select name="colour">
+					<option value="Red">Red</option>
+					<option value="Purple">Purple</option>
+					<option value="Blue">Blue</option>
+					<option value="Green">Green</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><b><center>Extra Items:</center></b></td>
+			<td>
+				<input type="checkbox" name="extra1" value="Cap">Cap
+				<br/>
+				<input type="checkbox" name="extra2" value="Wristband">Wrist Band
+			</td>
+		</tr>		
+		<tr>
+			<td><center><b>Deliver To:</b></center></td>
+			<td>
+			<table border="0">
+					<tr>			
+					<td><b>First Name:</b></td>
+					<td><input type="text" name="Fname"></td>
+					</tr>
+					<tr>
+					<td><b>Last Name:</b></td>
+					<td><input type="text" name="Lname"></td>
+					</tr>
+					<tr>
+						<td><b>&nbsp Address1:</b></td>
+						<td><input type="text" name="add1"></td>
+					</tr>
+					<tr>
+						<td><b>&nbsp Address2:</b></td>
+						<td><input type="text" name="add2"></td>
+					</tr>
+					<tr>
+						<td><b>&nbsp Address3:</b></td>
+						<td><input type="text" name="add3"></td>
+					</tr>
+			</table>
+			</td>	
+		</tr>
+		<tr>
+			<td><b><center>Your Comments:</center></b></td>
+			<td>
+			<textarea name="Comments" rows="12" cols="60"></textarea>
+			<br/>
+			<input type="submit" name="order" value="Order Now">
+			</td>
+		</tr>
+	</form>
+</table>
+</div>
+</center>
+</body>
+</html>
+

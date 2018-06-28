@@ -1,0 +1,9 @@
+1)N comparisons
+
+2)After removing the first item from the array,we have to copy rest the to front and make the last element a null, thus the number of operations will depend on the number elements in the array.
+
+3)Yes. because we can speed up the process of searching an element in an array by implementing 'binary search' algorithm.But to do this array should be sorted.  
+
+4)Option 1 is more efficient, since it has only one comparison with respect to the option 2.
+
+5)Yes. -Xlint warnings can be suppressed with java annotations.
